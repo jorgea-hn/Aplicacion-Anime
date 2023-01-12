@@ -1,0 +1,37 @@
+.nav-link:hover {
+  background-color: #8DD5ED;
+  border-radius: 5%;
+}
+
+h1,
+h5 {
+  font-family: 'LemonRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+p,
+a {
+  font-family: 'SimplySansBookItalic';
+  font-weight: normal;
+  font-style: italic;
+}
+.header{
+  height: 10vh;
+}
+
+.main-home{
+  height: 80vh;
+}
+
+.card-body{
+  max-height: 150px;
+}
+
+footer{
+  height: 10vh;
+}
+
+.img {
+  object-fit: contain;
+}

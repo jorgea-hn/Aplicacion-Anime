@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} Mis Animes{% endblock%}
+
+{% block content %}
+<div class="formulario d-flex justify-content-center align-content-center">
+    <form class="m-4 p-4 rounded" style="background-color: #e3f2fd;" action="{{url_for('base.insert')}}" method="post">
+    <h2 class="text-center">Insertar Animes Vistos</h2>
+    <label  class="form-label" for="titulo">Titulo</label>
+    <input  class="form-control" type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo del anime"> <br>
+
+    <label for="descripcion">Descripcion</label>
+    <input class="form-control" type="text" id="descripcion" name="descripcion" placeholder="Ingrese una descripcion del anime"> <br>
+
+    <label for="imagen">Imagen</label>
+    <input class="form-control" type="text" id="imagen" name="imagen" placeholder="Ingrese la URL de la imagen"> <br>
+
+    <label for="url">URL para verlo</label>
+    <input class="form-control" type="text" id="url" name="url" placeholder="Ingrese la URL de la pagina web"> <br>
+
+    <input class="btn btn-primary" type="submit" value="Guardar">
+    </form>
+</div>
+
+
+
+{% endblock%}
+{% block footer %}
+    <footer class=" container-fluid text-center text-white " style="background-color: #97B0B7;">
+
+    <div class="text-center text-dark p-3">
+      © 2023 Copyright:
+      <a class="text-dark" href="#">Jorge Henriquez Novoa</a>
+    </div>
+
+
+  </footer>
+{% endblock%}

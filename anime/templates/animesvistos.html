@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Mis Animes{% endblock%}
+
+{% block content %}
+
+<main class="main-home">
+  <h1 class="text-center">Pagina de Animes vistos</h1>
+  <br>
+  <div class="d-flex justify-content-center">
+    <a class="btn btn-primary " href="{{url_for('base.create')}}">Crear un nuevo registro</a>
+  </div>
+
+  <div class="d-flex flex-wrap justify-content-around ">
+    {% for anime in animes %}
+    <div class="card w-33 mt-4 mb-4" style="width: 18rem;">
+      <a href="{{anime.url}}"><img src={{anime.imagen}} class="img card-img-top" widht=200 height=200 alt="imagen"></a>
+      <div class="card-body" style="background-color: #FDFBEE;">
+        <h5 class="card-title text-center">{{anime.titulo}}</h5>
+        <p class="card-text text-center">{{anime.descripcion}}</p>
+
+        <div class="d-flex justify-content-around mt-1">
+          <a class="btn card-text editar mw-1" style="background-color: #FBDA88;" href={{url_for('base.edit',
+            id=anime['id'])}} >Editar</a>
+          <a class="btn  card-text eliminar " style="background-color: #F28370;" href={{ url_for( 'base.delete' ,
+            id=anime['id']) }}>Eliminar</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+</main>
+{% endblock%}
